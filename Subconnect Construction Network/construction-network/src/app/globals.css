@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 201 98% 51%; /* Subconnect blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 36 75% 50%; /* Subconnect orange/yellow */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 14 77% 42%; /* Subconnect red/danger */
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 11% 14%; /* Subconnect dark background */
+    --foreground: 210 40% 98%;
+
+    --card: 222 11% 16%; /* Subconnect dark card background */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 11% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 201 98% 51%; /* Subconnect blue */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 36 75% 50%; /* Subconnect orange/yellow */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 14 77% 42%; /* Subconnect red/danger */
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Scrollbar for the Subconnect Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4b4c;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9af9;
+}
+
+/* Apply Inter font to the whole application */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom utility classes for the Subconnect UI */
+.subconnect-card {
+  @apply bg-subconnect-dark-card rounded-lg border border-subconnect-dark-lighter shadow-md;
+}
+
+.subconnect-stat {
+  @apply flex flex-col p-4 bg-subconnect-dark-card rounded-lg border border-subconnect-dark-lighter;
+}
+
+.subconnect-btn-primary {
+  @apply bg-subconnect-primary hover:bg-subconnect-primary/90 text-white font-medium px-4 py-2 rounded-md transition-colors;
+}
+
+.subconnect-btn-secondary {
+  @apply bg-subconnect-secondary hover:bg-subconnect-secondary/90 text-white font-medium px-4 py-2 rounded-md transition-colors;
+}
+
+.subconnect-btn-outline {
+  @apply border border-subconnect-gray bg-transparent hover:bg-subconnect-dark-lighter text-subconnect-gray-light font-medium px-4 py-2 rounded-md transition-colors;
+}
+
+.subconnect-input {
+  @apply bg-subconnect-dark-lighter border border-subconnect-dark-lighter focus:border-subconnect-primary rounded-md px-3 py-2 outline-none text-white;
+}
+
+.subconnect-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.subconnect-badge-primary {
+  @apply subconnect-badge bg-subconnect-primary/20 text-subconnect-primary;
+}
+
+.subconnect-badge-secondary {
+  @apply subconnect-badge bg-subconnect-secondary/20 text-subconnect-secondary;
+}
+
+.subconnect-badge-danger {
+  @apply subconnect-badge bg-subconnect-danger/20 text-subconnect-danger;
+}
+
+.subconnect-badge-success {
+  @apply subconnect-badge bg-subconnect-success/20 text-subconnect-success;
+}

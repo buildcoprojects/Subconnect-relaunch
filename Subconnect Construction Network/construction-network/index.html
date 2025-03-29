@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subconnect - Construction Industry Network</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #232425;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0d9af9;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #919394;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .card {
+            background-color: #333436;
+            border-radius: 0.5rem;
+            border: 1px solid #2a2b2c;
+            padding: 1.5rem;
+            width: 320px;
+            text-align: left;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #0d9af9;
+        }
+
+        .card h2 {
+            color: #0d9af9;
+            font-size: 1.25rem;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #b3b8b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #0d9af9;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #0b88e0;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Subconnect</div>
+    <div class="tagline">The professional network for the construction industry</div>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>Verified Profiles</h2>
+            <p>Build trust with verification badges for skills, certifications, and professional credentials.</p>
+        </div>
+        <div class="card">
+            <h2>Project Collaboration</h2>
+            <p>Share projects, progress updates, and collaborate with team members in real-time.</p>
+        </div>
+        <div class="card">
+            <h2>Tender Board</h2>
+            <p>Browse, post, and bid on construction tenders with integrated documentation and messaging.</p>
+        </div>
+    </div>
+
+    <a href="/dashboard" class="button">Go to Dashboard</a>
+</body>
+</html>
